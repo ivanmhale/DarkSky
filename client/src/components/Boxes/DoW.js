@@ -24,7 +24,7 @@ export default props => {
   let humidity = props.humidity*100;
   humidity = humidity.toFixed(2);
 
-  let precipProbability = props.precipProbability;
+  let precipProbability = props.precipProbability*100;
   precipProbability = precipProbability.toFixed(2);
 
   return (
@@ -38,7 +38,7 @@ export default props => {
         Low: {props.low}&#176; F around {getTime(props.lowTime)}
       </h4>
       <h4>Humidity: {humidity}%</h4>
-      <h4>Percipitation: {precipProbability*100}%</h4>
+      <h4>Percipitation: {precipProbability}%</h4>
       <h4>Wind Speed: {props.windSpeed} MPH</h4>
     </li>
   );
