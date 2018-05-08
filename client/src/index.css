@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image: linear-gradient(135deg, white, black);
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  background-attachment: fixed; }
+
+.app {
+  padding: 1rem; }
+
+.chart {
+  color: blue;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  .chart ::-webkit-scrollbar {
+    width: 10px; }
+  .chart ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); }
+  .chart ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8); }
+  .chart ::-webkit-scrollbar-thumb:hover {
+    background: #555; }
+
+.button {
+  width: 10rem;
+  height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  border: 0.1em solid #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  transition: all 0.15s;
+  font-size: 1.5rem; }
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+  .button:disabled {
+    background-color: #eee; }
+    .button:disabled:hover {
+      box-shadow: none; }
+
+.menu {
+  background-color: white;
+  max-width: 60rem;
+  width: 80%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(20%);
+  border-radius: 5px;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif; }
+  .menu h2 {
+    font-family: "Open Sans", sans-serif; }
+
+.getByLocation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; }
+
+.getByInput #errorMessage {
+  transition: all 0.2s;
+  color: transparent; }
+
+.getByInput .activeErrorMessage {
+  color: red !important; }
+
+.getByInput .bottom {
+  display: flex;
+  justify-content: space-between; }
+  .getByInput .bottom p {
+    transform: translateX(-2rem); }
+
+.inputField {
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  white-space: nowrap; }
+  .inputField input {
+    width: 75%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color: transparent;
+    font-size: 1.5rem;
+    transition: all 0.3s; }
+  .inputField p {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 13%;
+    transition: all 0.5s; }
+  .inputField:hover p {
+    font-size: 0.5rem;
+    top: -1rem; }
+  .inputField:hover input {
+    color: black; }
+
+.hasVal p {
+  font-size: 0.5rem !important;
+  top: -1rem !important; }
+
+.hasVal input {
+  color: black !important; }
+
+.timeAndSummary {
+  display: grid;
+  grid: 100% / auto 1fr;
+  column-gap: 2rem; }
+
+.scroll {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  overflow: scroll; }
+
+.box {
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0 3px;
+  padding: 0 5px;
+  background-color: white; }
+  .box h4:not(:last-child) {
+    margin-bottom: 1rem; }
+
+.link {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition-duration: 0.2s; }
+  @media only screen and (min-width: 460px) {
+    .link_1 {
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%); } }
+  @media only screen and (max-width: 460px) {
+    .link_1 {
+      top: 0;
+      right: 1rem; } }
+  .link_2 {
+    right: 2rem; }
+  .link:hover {
+    font-size: 1.2rem; }
