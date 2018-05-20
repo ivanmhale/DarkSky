@@ -10,6 +10,7 @@ export default props => {
     <Hour
       key={hour.time}
       time={hour.time}
+      icon={hour.icon}
       summary={hour.summary}
       temp={hour.temperature}
       humidity={hour.humidity}

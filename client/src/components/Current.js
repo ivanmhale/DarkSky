@@ -6,6 +6,7 @@ import _ from "underscore";
 import getTime from "../utils/timeConverter";
 export default props => {
   const {
+    icon,
     cloudCover,
     humidity,
     pressure,
@@ -16,6 +17,7 @@ export default props => {
   } = props.weather;
 
   var attrs = {
+    Status: [summary, icon],
     "Cloud Coverage": cloudCover,
     Humidity: humidity,
     Preassure: pressure,
@@ -33,7 +35,6 @@ export default props => {
     <Container className="current" title="Current">
       <div className="timeAndSummary">
         <h3>{getTime(time)}</h3>
-        <h3>Status: {summary}</h3>
       </div>
       <Scroll>{renderAttributes}</Scroll>
     </Container>

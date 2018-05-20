@@ -1,9 +1,22 @@
 import React from "react";
+import Skycon from "./Skycon";
 
 export default props => {
   let val = props.val;
   if (props.name === "Cloud Coverage" || props.name === "Humidity") {
     val = val * 100;
+  }
+
+  if (props.name === "Status") {
+    return (
+      <li className="box">
+        <h3>Status:</h3>
+        <h3>
+          <i>{val[0]}</i>
+          <Skycon icon={val[1]} />
+        </h3>
+      </li>
+    );
   }
 
   val = val.toFixed(2);

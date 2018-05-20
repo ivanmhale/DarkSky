@@ -1,4 +1,6 @@
 import React from "react";
+import Skycon from './Skycon';
+import getTime from "../../utils/timeConverter";
 
 export default props => {
   var timestamp = props.time;
@@ -14,23 +16,17 @@ export default props => {
   ];
   var dayOfWeek = days[a.getDay()];
 
-  const getTime = timeStamp => {
-    var xx = new Date();
-    xx.setTime(timeStamp * 1000); // javascript timestamps are in milliseconds
-    const time = xx.toLocaleTimeString();
-    return time;
-  };
-
   let humidity = props.humidity*100;
-  humidity = humidity.toFixed(2);
+  humidity = humidity.toFixed(2).slice(0,-3);
 
   let precipProbability = props.precipProbability*100;
-  precipProbability = precipProbability.toFixed(2);
+  precipProbability = precipProbability.toFixed(2).slice(0,-3);
 
   return (
     <li className="box">
       <h3>{dayOfWeek}</h3>
       <h4>Status: <i>{props.summary}</i></h4>
+      <Skycon icon={props.icon}/>
       <h4>
         High: {props.high}&#176; F around {getTime(props.highTime)}
       </h4>

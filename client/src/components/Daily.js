@@ -9,6 +9,7 @@ export default props => {
     <Box
       key={day.time}
       time={day.time}
+      icon={day.icon}
       high={day.temperatureHigh}
       highTime={day.temperatureHighTime}
       low={day.temperatureLow}
