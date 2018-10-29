@@ -7,4 +7,5 @@ Classic weather app. Express backend was integrated only since API requests coul
 3. Dark Sky API
 
 [Link to app](https://poweredbydarksky.herokuapp.com/)
+
 [Link to Dark Sky API](https://darksky.net/dev)
