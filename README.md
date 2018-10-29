@@ -1,3 +1,10 @@
 # DarkSky Weather App
 
-## This web application uses the DarkSky api. Ran locally, the front-end proxies get requests to the server running on a seperate port. This was originally a front-end only application, but since a proxy directly to 'https://api.darksky.net' doesn't work when viewed on GitHub pages, I needed to add an Express backend to make calls to the api when in a production environment.
+Classic weather app. Express backend was integrated only since API requests could not be made from the client side in production.
+
+1. React front end
+2. Express back end
+3. Dark Sky API
+
+[Link to app](https://poweredbydarksky.herokuapp.com/)
+[Link to Dark Sky API](https://darksky.net/dev)
